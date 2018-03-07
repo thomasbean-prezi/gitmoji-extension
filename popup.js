@@ -48,11 +48,12 @@ function constructList(data){
             document.execCommand("copy");
             document.body.removeChild(dummy);
         });
-        imgElem.addEventListener('mouseover', function(){
+        imgElem.addEventListener('dblclick', function(){
             console.log("IM HOVERING");
-            imgElem.style.transform = "scale(3,3)";
-            imgElem.style.backgroundColor = "white"
-            imgElem.style.border = "2px solid black"
+            zoomImg(imgElem);
+            // imgElem.style.transform = "scale(3,3)";
+            // imgElem.style.backgroundColor = "white"
+            // imgElem.style.border = "2px solid black"
         })
         imgElem.addEventListener('mouseout', function(){
             console.log("IM off");
@@ -62,6 +63,12 @@ function constructList(data){
         })
         append(listContainer, imgElem);
     }
+}
+
+function zoomImg(imgElem){
+    imgElem.style.transform = "scale(3,3)";
+    imgElem.style.backgroundColor = "white";
+    imgElem.style.border = "2px solid black";
 }
 
 function updateList(searchTerms){
