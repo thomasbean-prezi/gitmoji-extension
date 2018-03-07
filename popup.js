@@ -51,10 +51,14 @@ function constructList(data){
         imgElem.addEventListener('mouseover', function(){
             console.log("IM HOVERING");
             imgElem.style.transform = "scale(3,3)";
+            imgElem.style.backgroundColor = "white"
+            imgElem.style.border = "2px solid black"
         })
         imgElem.addEventListener('mouseout', function(){
             console.log("IM off");
             imgElem.style.transform = "scale(1,1)";
+            imgElem.style.backgroundColor = "transparent"
+            imgElem.style.border = "none"
         })
         append(listContainer, imgElem);
     }
