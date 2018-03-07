@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+
+  "name": "GitMoji Finder",
+  "description": "This extension allows the user to search and copy github eligible emojis.",
+  "version": "1.1",
+
+  "browser_action": {
+    "default_icon": "githublogo.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "https://www.github.com/",
+    "http://www.github.com/"
+  ]
+}
