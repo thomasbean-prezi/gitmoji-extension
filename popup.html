@@ -23,12 +23,24 @@
         }
 
         img:hover {
-            z-index: 9999;
+            z-index: 9000;
         }
 
         div {
             display: inline-block;
             width: 700px;
+        }
+
+        #floatdiv{
+            visibility: hidden;
+            z-index: 9999;
+            background-color: black;
+            opacity: 0.9;
+            color: ivory;
+            font-size: medium;
+            text-align: center;
+            width: 100px;
+            border-radius: 3px;
         }
 
         #container {
@@ -48,16 +60,15 @@
 </head>
 
 <body>
+<div id="floatdiv">
+    copied!
+</div>
 <h1>Find your GitHub Emojis</h1>
-<p>&#1f4af</p>
 <div>
     <input id="search" type="text" placeholder="Gimme mojis...">
 </div>
 <div id="container" class="mojilist">
 
-</div>
-<div class="popup" onclick="myFunction()">Click me!
-    <span class="popuptext" id="myPopup">Popup text...</span>
 </div>
 </body>
 </html>
